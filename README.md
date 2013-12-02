@@ -1,4 +1,0 @@
-ALooper
-=======
-
-CrossPlatform ALooper
