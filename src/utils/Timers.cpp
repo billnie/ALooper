@@ -34,6 +34,7 @@
 #include <windows.h>
 #endif
 
+// Androird Source tree has CLOCK_BOOTTIME only(bionic/libc/include/time.h)
 nsecs_t systemTime(int clock)
 {
 #if defined(HAVE_POSIX_CLOCKS)
@@ -41,8 +42,12 @@ nsecs_t systemTime(int clock)
             CLOCK_REALTIME,
             CLOCK_MONOTONIC,
             CLOCK_PROCESS_CPUTIME_ID,
+#ifdef CLOCK_BOOTTIME
             CLOCK_THREAD_CPUTIME_ID,
             CLOCK_BOOTTIME
+#else
+            CLOCK_THREAD_CPUTIME_ID
+#endif
     };
     struct timespec t;
     t.tv_sec = t.tv_nsec = 0;

@@ -40,9 +40,9 @@
 #define HAVE_SYMLINKS
 #endif
 
-//#ifndef HAVE_POSIX_CLOCKS
-//#define HAVE_POSIX_CLOCKS
-//#endif
+#ifndef HAVE_POSIX_CLOCKS
+#define HAVE_POSIX_CLOCKS
+#endif
 
 #ifndef HAVE_ENDIAN_H
 #define HAVE_ENDIAN_H
