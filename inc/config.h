@@ -20,7 +20,8 @@
 #if defined(__arm__)
 #include "config-arm.h"
 #else
-#error the platform is unsupported, TODO
+#include "config-arm.h"
+//#error the platform is unsupported, TODO
 #endif
 
 #endif /* _TANGMAI_CONFIG_ARM_H */

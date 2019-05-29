@@ -20,6 +20,7 @@
 #include <stdint.h>
 
 #ifndef ANDROID_ATOMIC_INLINE
+//#define ANDROID_ATOMIC_INLINE inline __attribute__((always_inline))
 #define ANDROID_ATOMIC_INLINE inline __attribute__((always_inline))
 #endif
 
